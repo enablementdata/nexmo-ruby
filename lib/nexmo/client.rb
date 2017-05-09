@@ -332,7 +332,7 @@ module Nexmo
         :no_content
       when Net::HTTPSuccess
         if http_response['Content-Type'].split(';').first == 'application/json'
-          JSON.parse(http_response.body)
+          JSON.parse(http_response.body, object_class: Nexmo::Entity)
         else
           http_response.body
         end
