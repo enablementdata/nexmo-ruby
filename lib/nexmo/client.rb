@@ -137,24 +137,6 @@ module Nexmo
       post(@sns_host, '/sns/json', {cmd: 'subscribe', to: recipient}.merge(params))
     end
 
-    def initiate_call(params)
-      Kernel.warn "#{self.class}##{__method__} is deprecated (use the Voice API instead)."
-
-      post(@host, '/call/json', params)
-    end
-
-    def initiate_tts_call(params)
-      Kernel.warn "#{self.class}##{__method__} is deprecated (use the Voice API instead)."
-
-      post(@api_host, '/tts/json', params)
-    end
-
-    def initiate_tts_prompt_call(params)
-      Kernel.warn "#{self.class}##{__method__} is deprecated (use the Voice API instead)."
-
-      post(@api_host, '/tts-prompt/json', params)
-    end
-
     def start_verification(params)
       post(@api_host, '/verify/json', params)
     end
