@@ -8,7 +8,6 @@ rvm:
   - 2.3.3
   - 2.4.0
   - ruby-head
-  - jruby-19mode
 matrix:
   allow_failures:
     - rvm: ruby-head
